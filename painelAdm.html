@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban - ADM Pannel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/style/styles.css" />
+  </head>
+
+  <body>
+    <div class="caixaPrincipal">
+      <div class="tituloDaPagina">
+        <h1>Users</h1>
+        <p>Create new users here</p>
+      </div>
+      <div class="gridColunas">
+        <div class="coluna">
+          <div>
+            <fieldset>
+              <legend>Creating</legend>
+
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                maxlenght="100"
+                placeholder="e.g. John Doe"
+                autocomplete="on"
+              />
+              <br /><br />
+              <label for="job">Job</label>
+              <select name="job" id="job">
+                <option value="Choose one" selected>Choose one</option>
+                <option value="Startup CEO">Startup CEO</option>
+                <option value="Senior Product Analyst">
+                  Senior Product Analyst
+                </option>
+                <option value="FrontEnd Intermediate Developer">
+                  FrontEnd Intermediate Developer
+                </option>
+                <option value="Q.A Tester">Q.A Tester</option>
+                <option value="IT Intern">IT Intern</option>
+                <option value="Complica's Student">Complica's Student</option>
+              </select>
+              <br /><br />
+
+              <fieldset>
+                <legend>Current activity</legend>
+                <br /><input
+                  type="checkbox"
+                  name="activity"
+                  id="data"
+                />Data <br /><input
+                  type="checkbox"
+                  name="activity"
+                  id="coding"
+                />Coding
+                <br />
+                <input type="checkbox" name="activity" id="sourced" />Sourced
+              </fieldset>
+              <br />
+              <button onclick="gerarResultado()">Generate</button>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="coluna">
+          <div>
+            <textarea
+              name="resultado"
+              id="resultado"
+              cols="30"
+              rows="10"
+              autocomplete="off"
+              disabled
+              style="resize: none; min-width: 275px; scroll: auto"
+            ></textarea>
+            <br />
+            <button onclick="copiarElemento()">Copy to clipboard</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/src/criandousuario.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/style/styles.css" />
+  </head>
+
+  <body>
+    <div class="caixaPrincipal">
+      <div class="tituloDaPagina">
+        <h1>Talents to nurture</h1>
+        <p>
+          Use the kanban view to access talent profiles or drag and drops cards
+        </p>
+      </div>
+      <div class="gridColunas">
+        <div class="coluna">
+          <div class="tituloColuna"><span>Rascunho</span></div>
+
+          <cartao-kanban
+            nome="Roberto Nóbrega Jr."
+            cargo="Senior Product Analyst"
+            tags="Sourced,Coding,Data"
+            imgsrc="20"
+          ></cartao-kanban>
+          <cartao-kanban
+            nome="Daniel"
+            cargo="Estagiário de ADM"
+            tags="Sourced,Coding"
+          ></cartao-kanban>
+        </div>
+        <div class="coluna">
+          <div class="tituloColuna"><span>Avaliando</span></div>
+          <cartao-kanban
+            nome="Matheus NoCode"
+            cargo="Startup CEO"
+            tags="coding,sourced"
+            imgsrc="2"
+          ></cartao-kanban>
+        </div>
+        <div class="coluna">
+          <div class="tituloColuna"><span>Fazendo</span></div>
+
+          <cartao-kanban
+            nome="Débora Bartender"
+            cargo="Complica's Student"
+            tags="data"
+            imgsrc="20"
+          >
+          </cartao-kanban>
+        </div>
+        <div class="coluna">
+          <div class="tituloColuna"><span>Feito</span></div>
+          <cartao-kanban
+            nome="Projeto de Software"
+            cargo="Senior Product Analyst"
+            tags="coding"
+            imgsrc="11"
+          ></cartao-kanban>
+
+          <cartao-kanban nome="Thaiz" cargo="FrontEnd Intermediate Developer" tags="coding" imgsrc="34"
+  ></cartao-kanban>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/src/components.js" defer></script>
+  </body>
+</html>
