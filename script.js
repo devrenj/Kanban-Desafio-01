@@ -1,7 +1,6 @@
 
 var dragged;
 
-
 function allowDrop(evento) {
   evento.preventDefault();
 
