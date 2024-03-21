@@ -18,31 +18,29 @@
       <p>Use the kanban view to access talent profiles or drag and drops cards</p>
     </div>
     <div class="gridColunas">
-      <div class="coluna" id="rascunho">
+      <div class="coluna">
         <div class="tituloColuna"><span>Rascunho</span></div>
-        <div id="cardsAvaliando">
-          <div class="cartao" draggable="true" id="cartao1" ondragstart="drag(event)">
-            <div class="usuario">
-              <div class="avatar">
-                <img class="imagemAvatar" src="avatars/Avatar-20.png" alt="">
-              </div>
-              <div class="detalhes">
-                <p class="nome">Roberto 1</p>
-                <p class="cargo">Senior Product Analyst</p>
-              </div>
+        <div class="cartao" draggable="true" id="cartao1" ondragstart="drag(event)">
+          <div class="usuario">
+            <div class="avatar">
+              <img class="imagemAvatar" src="avatars/Avatar-20.png" alt="">
             </div>
-            <div id="divTags" class="tags">
-              <span class="tag-block outline">Sourced</span>
-              <span class="tag-block laranja">Coding</span>
-              <span class="tag-block verde">Data</span>
+            <div class="detalhes">
+              <p class="nome">Roberto 1</p>
+              <p class="cargo">Senior Product Analyst</p>
             </div>
+          </div>
+          <div class="tags">
+            <span class="tag-block outline">Sourced</span>
+            <span class="tag-block laranja">Coding</span>
+            <span class="tag-block verde">Data</span>
           </div>
         </div>
         <div class="dropaAqui dropavel" ondrop="drop(event)" ondragover="allowDrop(event)"
           ondragleave="dragLeave(event)">
         </div>
       </div>
-      <div class="coluna" id="avaliando">
+      <div class="coluna">
         <div class="tituloColuna"><span>Avaliando</span></div>
         <div class="cartao" draggable="true" id="cartao2" ondragstart="drag(event)">
           <div class="usuario">
@@ -64,7 +62,7 @@
           ondragleave="dragLeave(event)">
         </div>
       </div>
-      <div class="coluna" id="fazendo">
+      <div class="coluna">
         <div class="tituloColuna"><span>Fazendo</span></div>
         <div class="cartao" draggable="true" id="cartao3" ondragstart="drag(event)">
           <div class="usuario">
@@ -86,7 +84,7 @@
           ondragleave="dragLeave(event)">
         </div>
       </div>
-      <div class="coluna" id="feito">
+      <div class="coluna">
         <div class="tituloColuna"><span>Feito</span></div>
         <div class="cartao" draggable="true" id="cartao4" ondragstart="drag(event)">
           <div class="usuario">
