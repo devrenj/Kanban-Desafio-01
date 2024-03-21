@@ -1,0 +1,111 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3, h4, h5, p, span {
+  padding: 0;
+  margin: 0;
+}
+
+.tituloDaPagina{
+  padding: 40px 0px;
+}
+
+.tituloDaPagina p {
+  margin-top: 10px;
+  color: #A3A9B6;
+}
+
+.caixaPrincipal{
+  padding: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.gridColunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+@media (max-width: 1080px){
+.gridColunas {
+  grid-template-columns: 1fr 1fr
+}
+}
+
+@media (max-width: 768px){
+.gridColunas {
+  grid-template-columns: 1fr
+}
+}
+
+.tituloColuna {
+  padding: 5px 15px 15px 15px;
+}
+
+.coluna {
+  background-color: #f9fafb;
+  border-radius: 15px;
+  padding: 10px;
+  height: 600px;
+}
+
+.cartao {
+  background-color: white;
+  border: 1px solid #DADEE1;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.cargo {
+  font-size: 12px;
+  color: #A3A9B6;
+}
+
+.nome {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 3px
+}
+
+.imagemAvatar{
+  width: 50px;
+  background-color: #F7B7B2;
+  border-radius: 15px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag-block {
+  padding: 4px 15px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.outline {
+  background-color: white;
+  border: 1px solid #DADEE1;
+}
+
+.verde {
+    background-color: #D1FADF;
+    color: #1DC47E;
+}
+
+.laranja {
+    background-color: #FFF2E5;
+    color: #FF9327;
+}
