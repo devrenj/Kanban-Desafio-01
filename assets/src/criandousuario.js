@@ -1,7 +1,9 @@
 const nome = document.getElementById('name');
 const cargo = document.getElementById('job');
 const atividades = document.getElementsByName('activity');
-const resultado = document.getElementById('resultado');
+const result = document.getElementById('result');
+const details = document.getElementById('details');
+
 const avatarMax = 36;
 
 // //LEARN: Pegar o resultado pela URL
@@ -34,15 +36,19 @@ function gerarResultado() {
     cartaoKanban += `tags="${atividadesSelecionadas}" `;
   }
 
+  if (details.value != '' && details.value != undefined) {
+    cartaoKanban += `detalhes="${details.value}" `;
+  }
+
   cartaoKanban += `imgsrc="${numeroAleatorio}"
   ></cartao-kanban>`;
 
-  resultado.innerHTML = cartaoKanban;
+  result.innerHTML = cartaoKanban;
 }
 
 async function copiarElemento() {
   try {
-    await navigator.clipboard.writeText(resultado.value);
+    await navigator.clipboard.writeText(result.value);
     alert('Copied that!');
   } catch (e) {
     alert(`Erro: ${e.message}`);
