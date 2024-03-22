@@ -3,13 +3,40 @@ class cartaoKanban extends HTMLElement {
     super();
     const componente = this.attachShadow({ mode: 'open' });
     componente.appendChild(this.conteudoCartao());
+
     componente.appendChild(this.estiloCartao());
   }
+
   //Preguiça né Rafa? Toma hard-work :D:D:D:D:D
   conteudoCartao() {
-    const caminhoImagens = '/assets/img/avatars/Avatar-'
+    const caminhoImagens = '/assets/img/avatars/Avatar-';
     const cartao = document.createElement('div');
     cartao.setAttribute('class', 'cartao');
+    cartao.setAttribute('draggable', 'true');
+    cartao.setAttribute('ondragstart', 'drag(event)');
+    
+    let listarIdCartao = [];
+    function verificarCartoes() {
+      let ultimoId = 0;
+      const cartoes = document.getElementsByClassName('Cartao');
+  
+      if (cartoes.length > 0) {
+        this.listarIdCartao = Array.from(cartoes).map(cartao => cartao.id);
+  
+        if (this.listarIdCartao.length > 0) {
+          const ultimoIdNumerico = parseInt(
+            this.listarIdCartao[this.listarIdCartao.length - 1].replace('cartao', '')
+          );
+          ultimoId = `cartao${ultimoIdNumerico + 1}`;
+        } else {
+          ultimoId = 'cartao1';
+        }
+  
+        cartao.setAttribute('id', ultimoId);
+      }
+      console.log('concluido')
+    }
+    verificarCartoes()
 
     const usuario = document.createElement('div');
     usuario.setAttribute('class', 'usuario');
@@ -24,6 +51,9 @@ class cartaoKanban extends HTMLElement {
 
     const detalhes = document.createElement('div');
     detalhes.setAttribute('class', 'detalhes');
+    detalhes.innerHTML =
+      this.getAttribute('detalhes') ||
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
 
     const nome = document.createElement('p');
     nome.setAttribute('class', 'nome');
@@ -60,20 +90,23 @@ class cartaoKanban extends HTMLElement {
     if (
       this.getAttribute('tags').toLowerCase().split(',').includes('sourced')
     ) {
-      console.log('first');
       tags.appendChild(sourced);
     }
 
     if (this.getAttribute('tags').toLowerCase().split(',').includes('coding')) {
-      console.log('second');
       tags.appendChild(coding);
     }
 
     if (this.getAttribute('tags').toLowerCase().split(',').includes('data')) {
-      console.log('third');
       tags.appendChild(data);
     }
 
+    const novoIdCartao = listarIdCartao.map(cartao => {
+      if (cartao.includes('cartao')) {
+        return cartao.slice('cartao'.length);
+      }
+      return cartao;
+    });
     return cartao;
   }
 
